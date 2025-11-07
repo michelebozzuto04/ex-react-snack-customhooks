@@ -1,6 +1,8 @@
 import React from 'react'
 import useSwitch from './useSwitch'
 import useDate from './useDate'
+import useCustomPointer from './useCustomPointer';
+import useKeyPress from './useKeyPress';
 
 function App() {
 
@@ -14,12 +16,22 @@ function App() {
   ) */
 
 
-  const currentDate = useDate();
+  /* const currentDate = useDate();
 
   return (
     <div>
       <h1>Data e ora attuali:</h1>
       <p>{currentDate?.toLocaleString()}</p>
+    </div>
+  ); */
+
+
+  const customPointer = useCustomPointer("🔥");
+
+  return (
+    <div>
+      <h1>Sposta il mouse per vedere il cursore personalizzato!</h1>
+      {customPointer}
     </div>
   );
 }
